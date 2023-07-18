@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../services/config"
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
+import "./Checkout.css"
 
 const Checkout = () => {
   const { carrito, vaciarCarrito, cantidadTotal, total } =
@@ -69,19 +70,19 @@ const Checkout = () => {
 
   return (
     <div>
-      <h2>Checkout</h2>
-      <form onSubmit={manejadorFormulario}>
+      <h2 className="text-3xl text-blue-900 font-thin mb-3">Checkout</h2>
+      <form onSubmit={manejadorFormulario} className="formulario">
         {carrito.map((producto) => (
-          <div key={producto.id}>
-            <p>
-              {producto.item.nombre} * {producto.cantidad}
-            </p>
-            <p>Precio $ {producto.item.precio}</p>
-            <hr />
+          <div
+            className="pl-8 grid grid-cols-3 justify-items-start"
+            key={producto.id}
+          >
+            <p>Item : {producto.item.nombre}</p>
+            <p>Cant. : {producto.cantidad}</p>
+            <p>Precio : {producto.item.precio}</p>
           </div>
         ))}
-        <hr />
-        <div>
+        <div className="mt-3 form-group">
           <label htmlFor="nombre"> Nombre </label>
           <input
             type="text"
@@ -89,7 +90,7 @@ const Checkout = () => {
             onChange={(e) => setNombre(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="apellido"> Apellido </label>
           <input
             type="text"
@@ -97,7 +98,7 @@ const Checkout = () => {
             onChange={(e) => setApellido(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="telefono"> Teléfono </label>
           <input
             type="text"
@@ -105,7 +106,7 @@ const Checkout = () => {
             onChange={(e) => setTelefono(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email"> Email </label>
           <input
             type="email"
@@ -113,7 +114,7 @@ const Checkout = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="emailConfirmacion"> Email Confirmación </label>
           <input
             type="email"
@@ -122,10 +123,13 @@ const Checkout = () => {
           />
         </div>
         {error && <p style={{ color: "red" }}> {error} </p>}
-        <button type="submit"> Finalizar Compra </button>
+        <button className="btn btn-outline btn-error" type="submit">
+          {" "}
+          Finalizar Compra{" "}
+        </button>
       </form>
       {orderId && (
-        <strong>
+        <strong className="ordenId">
           ¡Gracias por tu compra! La identificación de tu orden es: {orderId}
         </strong>
       )}

@@ -29,10 +29,6 @@ const ItemListContainer = () => {
       <h2 className="pl-5 text-2xl font-thin text-blue-900">
         Productos Marolio
       </h2>
-      <h3 className="pl-5 text-l font-thin ">
-        <strong>Utilizamos: </strong>Item, ItemList e ItemListContainer, con un
-        mock de datos local (con retraso simulado de 2segs)
-      </h3>
       <ItemList productos={productos} />
     </div>
   )

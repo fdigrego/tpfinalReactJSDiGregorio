@@ -21,9 +21,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-      <h2 className="ml-6 mt-2 mb-4 text-l text-thin">
-        Renderizado de UN SOLO producto
-      </h2>
       <ItemDetail {...producto} />
     </div>
   )

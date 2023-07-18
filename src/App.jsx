@@ -10,9 +10,6 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="text-xl text-green-900 font-bold p-4">
-          ReactJS: carpeta con TPFinal.
-        </h1>
         <BrowserRouter>
           <CartProvider>
             <NavBar />
