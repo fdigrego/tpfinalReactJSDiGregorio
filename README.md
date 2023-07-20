@@ -14,6 +14,7 @@ Este es mi primer ejercicio de ecommercio en base al curso de React en Coderhous
 - Agregar productos al carrito de compras
 - Continuar comprando o terminar la compra
 - Ver el carrito de compras
+- Seguir comprando (desde la vista del carrito)
 - Eliminar productos del carrito
 - Formulario basico para capturar info del comprador
 - Realizar una orden de compra
