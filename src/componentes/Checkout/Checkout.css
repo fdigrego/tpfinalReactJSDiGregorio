@@ -15,23 +15,18 @@ label {
 }
 
 input, textarea {
-  padding: 0.5rem;
+  padding: 2rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 1rem;
 }
 
-
 h2 {
   text-align: center;
 }
 
-.ordenId {
-  display: block;
-  margin: 4rem;
-  padding: 2rem;
-  font-size: 2rem;
-  border: 1px solid black;
-  border-radius: 5px;
+.mensaje {
+  max-width: 400px;
+  margin: 0 auto;
 }

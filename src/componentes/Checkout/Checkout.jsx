@@ -129,9 +129,13 @@ const Checkout = () => {
         </button>
       </form>
       {orderId && (
-        <strong className="ordenId">
-          ¡Gracias por tu compra! La identificación de tu orden es: {orderId}
-        </strong>
+        <div className="mensaje mt-4 flex flex-col items-center box-border rounded w-1/5 p-4 border border-solid border-gray-800">
+          <p className="text-xl font-bold text-gray-500">
+            ¡Gracias por su compra!
+          </p>
+          <p>La identificación de su orden es:</p>
+          <p className="text-2xl font-thin text-blue-900">{orderId}</p>
+        </div>
       )}
     </div>
   )
